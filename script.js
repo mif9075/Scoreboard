@@ -15,7 +15,7 @@ function init(){
         }
 
         httpRequest.onreadystatechange = processContents
-        httpRequest.open("GET", "http://gd.mlb.com/components/game/mlb/year_2019/month_06/day_4/master_scoreboard.json"
+        httpRequest.open("GET", "http://gd.mlb.com/components/game/mlb/year_2019/month_06/day_04/master_scoreboard.json"
         )
         httpRequest.send()
         console.log(` `, httpRequest);
