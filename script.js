@@ -63,8 +63,18 @@ function init(){
                     <h6>${items[item].home_team_name}</br>${items[item].home_win}-${items[item].home_loss}</h6>
                     <hr>
 
-                    <h6>${items[item].away_probable_pitcher.last}, ${items[item].away_probable_pitcher.first}</br>${items[item].away_win}-${items[item].away_loss}</h6>
-                    <h6>${items[item].home_probable_pitcher.last}, ${items[item].home_probable_pitcher.first}</br>${items[item].home_win}-${items[item].home_loss}</h6>
+                    <h6>${items[item].away_probable_pitcher.last}, ${items[item].away_probable_pitcher.first}
+                    
+                    
+                    ${items[item].away_probable_pitcher.s_wins}-${items[item].away_probable_pitcher.s_losses},
+                    </h6>
+
+                    <h6>${items[item].home_probable_pitcher.last}${items[item].home_probable_pitcher.first}
+                    
+                    
+        
+                    ${items[item].home_probable_pitcher.s_wins}-${items[item].home_probable_pitcher.s_losses},
+                    </h6>
                     
                   </div>
                 </div>
