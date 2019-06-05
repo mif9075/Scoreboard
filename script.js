@@ -52,23 +52,7 @@ function init(){
 
         for (let item in items) {
             if (items.hasOwnProperty(item)) {
-                cards += `<div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                  <h4 class="my-0 font-weight-normal">7:05pm</h4>
-                </div>
-                <div class="card-body">
-                  <h1 class="card-title pricing-card-title"><small class="text-muted">29-30</small></h1>
-                  <h1 class="card-title pricing-card-title">Nationals <small class="text-muted">26-33</small></h1>
-                  <h1>Probable Pitchers</h1>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>R. Lopez CHW SP</li>
-                    <li>3-5, 6.20 ERA, 1.64 WHIP </li>
-                    <p></p>
-                    <li>S. Strasburg WAS SP</li>
-                    <li>5-3, 3.19 ERA, 0.99 WHIP</li>
-                  </ul>
-                </div>
-              </div>`
+                cards += ``
             }
         }
         cardDeck.innerHTML = cards;
