@@ -55,15 +55,15 @@ function init(){
                 console.log(items[item].time);
                 cards += `<div class="col-md-4">
                 <div class="card-header">
-                <h4 class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].home_time_zone}</h4>
+                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}</p>
                 </div>
-                  <div class="card-body">
+                <div class="card-body">
+                    
+                    <h6>${items[item].away_team_name}</h6><p>${items[item].away_win}-${items[item].away_loss}</p>
+                    <h6>${items[item].home_team_name}</h6><p>${items[item].home_win}-${items[item].home_loss}</p>
+                    
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
                       <small class="text-muted">9 mins</small>
                     </div>
                   </div>
