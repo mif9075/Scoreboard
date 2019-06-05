@@ -1,3 +1,4 @@
+let d = new Date();
 
 window.onload = function () {
     init()
@@ -21,6 +22,8 @@ function init(){
         // console.log(` `, httpRequest);
         
     }
+
+    document.getElementById("#primary").innerHTML = d.toDateString();
 
     function processContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -46,13 +49,13 @@ function init(){
 
     function createCards(items) {
         let cardDeck = document.querySelector(".container > .content")
-        console.log(items);
+        // console.log(items);
 
         let cards = ``
 
         for (let item in items) {
             if (items.hasOwnProperty(item)) {
-                console.log(items[item].time);
+                // console.log(items[item].time);
                 cards += `<div class="col-md-4">
                 <div class="card-header">
                 <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}</p>
