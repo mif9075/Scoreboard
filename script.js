@@ -1,10 +1,19 @@
 let d = new Date();
+let newDay = d.getDate();
+let newString = "0"+newDay;
+console.log(newString)
 
 window.onload = function () {
     init()
 }
 
 function init(){
+
+    document.querySelector('#previous')
+        .addEventListener('click', newDatePrevious);
+    
+    document.querySelector('#next')
+        .addEventListener('click', newDateNext);
     
     let httpRequest
 
@@ -16,14 +25,36 @@ function init(){
         }
 
         httpRequest.onreadystatechange = processContents
-        httpRequest.open("GET", "http://gd.mlb.com/components/game/mlb/year_2019/month_06/day_05/master_scoreboard.json"
+        httpRequest.open("GET", `http://gd.mlb.com/components/game/mlb/year_${d.getFullYear()}/month_06/day_${newString}/master_scoreboard.json`
         )
         httpRequest.send()
         // console.log(` `, httpRequest);
         
+        
+
     }
 
     document.getElementById("#primary").innerHTML = d.toDateString();
+    
+    function newDateNext() {
+        newDay=newDay+1;
+        newString = "0"+newDay;
+
+        document.getElementById("#primary").innerHTML = newDay;
+    
+        makeRequest();
+
+    }
+
+    function newDatePrevious() {
+        newDay=newDay-1;
+        newString = "0"+newDay;
+        
+        document.getElementById("#primary").innerHTML = newDay;
+
+        makeRequest();
+
+    }
 
     function processContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
